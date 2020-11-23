@@ -1,1 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2020-11-23T05:53:13.227Z" agent="5.0 (Windows)" version="13.10.1" etag="cf2EpQuwqIt8Q_5UkrnZ" type="github"><diagram id="lWI4Yrw9_XgJYYFOmo5q">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-23T06:12:19.964Z" agent="5.0 (Windows)" etag="eiH4tCVj01HXecHUr_EK" version="13.10.1" type="github">
+  <diagram id="lWI4Yrw9_XgJYYFOmo5q" name="第 1 页">
+    <mxGraphModel dx="786" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sZy4BEvlhW2PZ91gEMgt-1" value="设备登录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sZy4BEvlhW2PZ91gEMgt-2" value="网关：校验应用id、设备id、密码，获取token" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
