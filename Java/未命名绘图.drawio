@@ -1,14 +1,38 @@
-<mxfile host="app.diagrams.net" modified="2020-11-23T06:12:19.964Z" agent="5.0 (Windows)" etag="eiH4tCVj01HXecHUr_EK" version="13.10.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-23T16:05:35.762Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="1zq31nOwP-UULuwEN-vO" version="13.10.0" type="github">
   <diagram id="lWI4Yrw9_XgJYYFOmo5q" name="第 1 页">
-    <mxGraphModel dx="786" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="sZy4BEvlhW2PZ91gEMgt-1" value="设备登录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="40" width="120" height="60" as="geometry" />
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sZy4BEvlhW2PZ91gEMgt-1" target="sZy4BEvlhW2PZ91gEMgt-2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sZy4BEvlhW2PZ91gEMgt-2" value="网关：校验应用id、设备id、密码，获取token" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="120" width="120" height="60" as="geometry" />
+        <mxCell id="sZy4BEvlhW2PZ91gEMgt-1" value="设备登录" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="40" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sZy4BEvlhW2PZ91gEMgt-2" target="txyQpk4Wq3mBFP4diiCH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sZy4BEvlhW2PZ91gEMgt-2" value="连接桶：校验设备id、密码，获取token" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="txyQpk4Wq3mBFP4diiCH-1" target="txyQpk4Wq3mBFP4diiCH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-1" value="连接桶：获取连接可用信息，并使用可用信息获取连接" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-2" value="设备连接mq，向mq发送消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-10" value="网关机：接收订阅的mq消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-11" value="前面代理获取接收到的mq消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-12" value="解析消息，并通过线程池处理任务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
