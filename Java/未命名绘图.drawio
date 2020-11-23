@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-23T16:05:35.762Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="1zq31nOwP-UULuwEN-vO" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-23T16:24:24.913Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="M-Dt-YqCh8hfUrhbjAeF" version="13.10.0" type="github">
   <diagram id="lWI4Yrw9_XgJYYFOmo5q" name="第 1 页">
     <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -22,17 +22,38 @@
         <mxCell id="txyQpk4Wq3mBFP4diiCH-1" value="连接桶：获取连接可用信息，并使用可用信息获取连接" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="190" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="txyQpk4Wq3mBFP4diiCH-2" target="txyQpk4Wq3mBFP4diiCH-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="txyQpk4Wq3mBFP4diiCH-2" value="设备连接mq，向mq发送消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="txyQpk4Wq3mBFP4diiCH-10" target="txyQpk4Wq3mBFP4diiCH-11">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="txyQpk4Wq3mBFP4diiCH-10" value="网关机：接收订阅的mq消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="txyQpk4Wq3mBFP4diiCH-11" target="txyQpk4Wq3mBFP4diiCH-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="txyQpk4Wq3mBFP4diiCH-11" value="前面代理获取接收到的mq消息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="txyQpk4Wq3mBFP4diiCH-12" value="解析消息，并通过线程池处理任务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-12" value="解析消息，并通过多线程处理任务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-17" value="调用过滤器&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-18" value="过滤器：限流、鉴权、然后根据不同的策略调用不同的处理器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-19" value="设备服务：登录处理器调用设备服务暴露的登录接口执行登录逻辑" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="txyQpk4Wq3mBFP4diiCH-20" value="设备服务登录操作结果返回网关机，经过过滤器的包装，调用mqtt返回给设备" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
